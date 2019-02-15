@@ -1,0 +1,70 @@
+@import "./common";
+@import "./mymixin";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+$a:100%;
+html,
+body {
+    @include wh;
+}
+
+.container {
+    @include wh;
+    @include boxFlex;
+    flex-direction: column;
+    font-size: pxTorem(18px);
+}
+
+.header {
+    width: $a;
+    height: pxTorem(45px);
+    background: black;
+    color: rgb(224, 224, 224);
+    text-align: center;
+    line-height: pxTorem(45px);
+}
+
+.main {
+    width: $a;
+    flex: 1;
+    overflow: auto;
+    .main-header {
+        width: $a;
+        padding: pxTorem(18px);
+        dl {
+            width: $a;
+            @include boxFlex;
+            dt {
+                width: 20%;
+                img {
+                    width: $a;
+                }
+            }
+            dd {
+                flex: 1;
+                padding-left: pxTorem(10px);
+                span {
+                    font-size: pxTorem(14px);
+                    color: rgb(208, 209, 209);
+                }
+            }
+        }
+    }
+    .banner {
+        width: $a;
+        img {
+            width: $a;
+        }
+    }
+}
+
+.footer {
+    width: $a;
+    height: pxTorem(50px);
+    background: wheat;
+}

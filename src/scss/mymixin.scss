@@ -1,0 +1,52 @@
+@mixin sizing {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin wh{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin boxFlex {
+    display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+}
+
+@mixin position($position:absolute) {
+    position: $position
+}
+
+@mixin justify ($justify:center) {
+    -webkit-justify-content: $justify;
+    -moz-justify-content: $justify;
+    -ms-justify-content: $justify;
+    -o-justify-content: $justify;
+    justify-content: $justify;
+}
+
+@mixin align ($align:center) {
+    -webkit-align-items: $align;
+    -moz-align-items: $align;
+    -ms-align-items: $align;
+    -o-align-items: $align;
+    align-items: $align;
+}
+
+@mixin flex ($grow: 1, $shrink: 1, $basis: 0%) {
+    -webkit-flex: $grow $shrink $basis;
+    -moz-flex: $grow $shrink $basis;
+    -ms-flex: $grow $shrink $basis;
+    -o-flex: $grow $shrink $basis;
+    flex: $grow $shrink $basis;
+}
+
+@mixin hidden($hidden:hidden){
+    overflow: $hidden;
+}
